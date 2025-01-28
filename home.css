@@ -1,0 +1,288 @@
+/* 全体のスタイル設定 */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    top: -110px; /* 初期位置を画面外に設定 */
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: rgba(33, 33, 33, 0.5);
+    color: white;
+    z-index: 1; 
+    transition: top 0.8s ease; /* アニメーションの設定 */
+}
+  
+header.show {
+    top: 0; /* 表示時の位置 */
+}
+
+.logo h1 p {
+    text-decoration: none;
+    font-size: 1.8em; /* ロゴを少し大きく */
+    letter-spacing: 1px; /* ロゴの文字間隔を広げる */
+}
+
+/* ハンバーガーメニューのアイコン */
+.hamburger {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    align-items: center;
+    right: 50px; /* アイコンを右端に配置 */
+    top: 5%;
+    z-index: 100; 
+    transform: translateY(-50%); /* 縦位置を中央揃え */
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 3px; /* アイコンの隙間を狭く */
+    transition: all 0.3s ease;
+}
+
+/* 右からスライドインするナビゲーションメニュー */
+.fullscreen-menu {
+    position: fixed;
+    top: 0;
+    right: -300px; /* メニューを初期状態で画面外に隠す */
+    width: 300px; /* メニューの幅を300pxに設定 */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.4s ease; /* 右からスライドインするアニメーション */
+}
+
+/* メニューが表示されるときの位置 */
+.fullscreen-menu.active {
+    right: 0;
+}
+
+/* ナビゲーションのリストスタイル */
+.fullscreen-menu ul {
+    list-style-type: none;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+.fullscreen-menu ul li {
+    margin: 0px 0;
+}
+
+.fullscreen-menu ul li a {
+    color: white;
+    font-size: 1.0em;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.fullscreen-menu ul li a:hover {
+    color: #ff6347;
+}
+
+/* 閉じるボタン */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    cursor: pointer;
+    color: white;
+}
+
+/* ヒーローセクション */
+.hero {
+    height: 100vh;
+    background: url('lab.png');
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    background-size: cover; /* 背景画像を追加する場合に使用 */
+    background-position: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5em; /* タイトルを大きく */
+    margin: 0;
+    letter-spacing: 2px; /* タイトルの文字間隔を広げる */
+}
+
+.hero-content p {
+    font-size: 1.5em; /* 説明文を少し大きく */
+    margin-bottom: 20px;
+}
+
+.hero-content .btn {
+    background-color: #ff6347;
+    color: white;
+    padding: 14px 28px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+.hero-content .btn:hover {
+    background-color: #ff4500;
+}
+
+/* サーバー概要セクション */
+.about {
+    padding: 60px 20px; /* 十分な余白を追加 */
+    background-color: #f9f9f9;
+    text-align: center;
+    line-height: 1.8; /* 行間を調整 */
+}
+
+.about h2 {
+    font-size: 2.8em; /* タイトルをさらに大きく */
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.about p {
+    font-size: 1.4em; /* 説明文を大きくして読みやすく */
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+
+/* 最新のお知らせセクション */
+.news {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.news h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.news ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.2em;
+    color: #666;
+    text-align: left; /* リストを左寄せ */
+    display: inline-block; /* リスト全体を中央に寄せる */
+}
+
+/* リストアイテムにオレンジ色の点を追加 */
+.news ul li {
+    position: relative;
+    padding-left: 20px; /* 点のためのスペースを作成 */
+    margin-bottom: 10px;
+}
+
+.news ul li::before {
+    content: "•"; /* 点を追加 */
+    position: absolute;
+    left: 0; /* 左端からの位置を調整 */
+    color: #ff6347; /* オレンジ色に設定 */
+    font-size: 1.5em; /* 点のサイズを調整 */
+    line-height: 1; /* 縦方向の位置を調整 */
+}
+
+/* フッター */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+    margin-top: 40px;
+}
+
+::-webkit-scrollbar {
+    width: 8px; 
+  }
+  
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+  
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 0px; 
+  }
+  
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+/* メディアクエリ - スマートフォン対応 */
+@media screen and (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        font-size: 1.2em;
+    }
+
+    .about h2 {
+        font-size: 2.2em;
+    }
+
+    .about p {
+        font-size: 1.1em;
+    }
+
+    .news h2 {
+        font-size: 2.2em;
+    }
+
+    .news ul {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .about h2 {
+        font-size: 2em;
+    }
+
+    .about p {
+        font-size: 1em;
+    }
+
+    .news h2 {
+        font-size: 2em;
+    }
+
+    .news ul {
+        font-size: 0.9em;
+    }
+}

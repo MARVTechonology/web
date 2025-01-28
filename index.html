@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARVServer - Home</title>
+    <link rel="stylesheet" href="home.css">
+    <script src="script.js" defer></script> <!-- JavaScriptを追加 -->
+</head>
+<body>
+    <div class="hamburger" onclick="toggleMenu()"> <!-- ハンバーガーメニューアイコン -->
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>MARVserver</h1>
+                <!--<p>MARVserver Season 1</p>-->
+            </div>
+            
+        </nav>
+    </header>
+
+    <!-- フルスクリーンメニュー -->
+    <nav class="fullscreen-menu">
+        <div class="close-btn" onclick="toggleMenu()">×</div>
+        <ul>
+            <li><a href="https://marvgame.net/rules/">サーバールール</a></li>
+            <li><a href="https://marvgame.net/join/">サーバーへの参加方法</a></li>
+            <li class="dropdown">
+                <a href="https://marvgame.net/money/">お金について</a>
+                <ul class="dropdown-content">
+                    <li><a href="https://marvgame.net/earn/">お金の稼ぎ方</a></li>
+                    <li><a href="https://marvgame.net/casino/">Casino</a></li>
+                    <li><a href="https://marvgame.net/invest/">暗号資産プラグイン</a></li>
+                </ul>
+            </li>
+            <li><a href="https://marvgame.net/shop/">SHOPの作り方</a></li>
+            <li><a href="https://marvgame.net/earthmap/">Earthmap</a></li>
+            <li><a href="https://marvgame.net/wiki/">サポート</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>ようこそ、MARVServerへ！</h1>
+            <p>新しくできたPvPとEarthができるサーバーです！</p>
+            <a href="https://marvgame.net/join/" class="btn">今すぐ参加</a>
+        </div>
+    </section>
+
+    <section class="about">
+        <h2>サーバー概要</h2>
+        <p>MARVserverは、多様なゲームモードとカスタマイズ可能な環境を提供する、プレイヤー主導のマインクラフトサーバーです。</p>
+        <p>経済とPvPの要素があるこのサーバーでは、サバイバル、スカイブロック、カジノ、バトルゲーム、Earthワールドなど、各プレイヤーが自分のスタイルに合わせて楽しめる多彩なゲームプレイを用意しています。</p>
+        <p>プレイヤーはサーバー内通貨を使用して、スロットやルーレットなどのカジノゲームを楽しむことができ、その通貨はサーバー内の任意の世界で使用可能です。</p>
+        <p>また、自分だけのショップや国を設立し、経済活動に参加する機会も提供しています。自分の土地を買ったり、独自通貨を使ったりし、アイテムを購入することが可能です。</p>
+        <p>MARVserverは、コミュニティの声を反映し、常に進化し続けるサーバーを目指しています。</p>
+    </section>
+
+    <section id="news" class="news">
+        <h2>最新のお知らせ</h2>
+        <ul>
+            <li>現在 - 現在はありません</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 MARVServer. All rights reserved.</p>
+    </footer>
+</body>
+</html>
