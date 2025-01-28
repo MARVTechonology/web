@@ -110,7 +110,7 @@ header.show {
 /* ヒーローセクション */
 .hero {
     height: 100vh;
-    background: url('lab.png');
+    background: url('img/lab.png');
     background-attachment: fixed;
     display: flex;
     justify-content: center;
